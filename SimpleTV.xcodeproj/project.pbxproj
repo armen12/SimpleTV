@@ -1,0 +1,591 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9E49A101248E6AC300E20EF7 /* GenericView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E49A100248E6AC300E20EF7 /* GenericView.swift */; };
+		9E49A103248E6AE600E20EF7 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E49A102248E6AE600E20EF7 /* LoginView.swift */; };
+		9E8171DD248F858000264BCB /* GitSceneTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8171DC248F858000264BCB /* GitSceneTableViewCell.swift */; };
+		9E9D2FBE248B8DB60009F61C /* Observable+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9D2FBD248B8DB60009F61C /* Observable+Ext.swift */; };
+		9E9D2FC1248B99690009F61C /* SingleRepoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9D2FC0248B99690009F61C /* SingleRepoViewController.swift */; };
+		9E9D2FC3248CC61A0009F61C /* SingleRepoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9D2FC2248CC61A0009F61C /* SingleRepoViewModel.swift */; };
+		9EB910F82489061900629CC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB910F72489061900629CC7 /* AppDelegate.swift */; };
+		9EB910FA2489061900629CC7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB910F92489061900629CC7 /* SceneDelegate.swift */; };
+		9EB910FC2489061900629CC7 /* LoginSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB910FB2489061900629CC7 /* LoginSceneViewController.swift */; };
+		9EB910FF2489061900629CC7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EB910FD2489061900629CC7 /* Main.storyboard */; };
+		9EB911012489061B00629CC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EB911002489061B00629CC7 /* Assets.xcassets */; };
+		9EB911042489061B00629CC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EB911022489061B00629CC7 /* LaunchScreen.storyboard */; };
+		9EB9110C2489079000629CC7 /* LoginSceneVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB9110B2489079000629CC7 /* LoginSceneVM.swift */; };
+		9EB9110E248910B300629CC7 /* ViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB9110D248910B300629CC7 /* ViewModelProtocol.swift */; };
+		9EBFFC84249266AF00C3D153 /* GitSceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBFFC83249266AF00C3D153 /* GitSceneView.swift */; };
+		9EC70CA8248A6E35005843E7 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC70CA7248A6E35005843E7 /* Application.swift */; };
+		9EC70CAA248A7002005843E7 /* GitSceneViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC70CA9248A7002005843E7 /* GitSceneViewModel.swift */; };
+		9EC70CAE248A755F005843E7 /* APITarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC70CAD248A755F005843E7 /* APITarget.swift */; };
+		9EC70CB1248A766F005843E7 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC70CB0248A766F005843E7 /* Configuration.swift */; };
+		9EC70CB3248A76A0005843E7 /* GitRepoAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC70CB2248A76A0005843E7 /* GitRepoAPI.swift */; };
+		9EC70CB5248A76F2005843E7 /* GitRepoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC70CB4248A76F2005843E7 /* GitRepoService.swift */; };
+		9EC70CB8248A770C005843E7 /* GitRepoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC70CB7248A770C005843E7 /* GitRepoModel.swift */; };
+		9EDEC7B9248921D000DC094B /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDEC7B8248921D000DC094B /* Storyboard.swift */; };
+		9EDEC7BB248921E600DC094B /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDEC7BA248921E600DC094B /* Reusable.swift */; };
+		9EDEC7CA2489425600DC094B /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDEC7C92489425600DC094B /* Storyboarded.swift */; };
+		9EDEC7CC2489434800DC094B /* MainScreenNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDEC7CB2489434800DC094B /* MainScreenNavigation.swift */; };
+		9EDEC7CE2489502E00DC094B /* GitSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDEC7CD2489502E00DC094B /* GitSceneViewController.swift */; };
+		C3C51E21B11AB63BAB8D4C2A /* Pods_SimpleTV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E05EFE596AAE0FD31A68BA0 /* Pods_SimpleTV.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0F11C4A7C39D6C562410EE30 /* Pods-SimpleTV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleTV.release.xcconfig"; path = "Target Support Files/Pods-SimpleTV/Pods-SimpleTV.release.xcconfig"; sourceTree = "<group>"; };
+		2E05EFE596AAE0FD31A68BA0 /* Pods_SimpleTV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleTV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		99A226AB55D4DC9E43D9381B /* Pods-SimpleTV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleTV.debug.xcconfig"; path = "Target Support Files/Pods-SimpleTV/Pods-SimpleTV.debug.xcconfig"; sourceTree = "<group>"; };
+		9E49A100248E6AC300E20EF7 /* GenericView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericView.swift; sourceTree = "<group>"; };
+		9E49A102248E6AE600E20EF7 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		9E8171DC248F858000264BCB /* GitSceneTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitSceneTableViewCell.swift; sourceTree = "<group>"; };
+		9E9D2FBD248B8DB60009F61C /* Observable+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+Ext.swift"; sourceTree = "<group>"; };
+		9E9D2FC0248B99690009F61C /* SingleRepoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleRepoViewController.swift; sourceTree = "<group>"; };
+		9E9D2FC2248CC61A0009F61C /* SingleRepoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleRepoViewModel.swift; sourceTree = "<group>"; };
+		9EB910F42489061900629CC7 /* SimpleTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9EB910F72489061900629CC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9EB910F92489061900629CC7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		9EB910FB2489061900629CC7 /* LoginSceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSceneViewController.swift; sourceTree = "<group>"; };
+		9EB910FE2489061900629CC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9EB911002489061B00629CC7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9EB911032489061B00629CC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9EB911052489061B00629CC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9EB9110B2489079000629CC7 /* LoginSceneVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSceneVM.swift; sourceTree = "<group>"; };
+		9EB9110D248910B300629CC7 /* ViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelProtocol.swift; sourceTree = "<group>"; };
+		9EBFFC83249266AF00C3D153 /* GitSceneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitSceneView.swift; sourceTree = "<group>"; };
+		9EC70CA7248A6E35005843E7 /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
+		9EC70CA9248A7002005843E7 /* GitSceneViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitSceneViewModel.swift; sourceTree = "<group>"; };
+		9EC70CAD248A755F005843E7 /* APITarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITarget.swift; sourceTree = "<group>"; };
+		9EC70CB0248A766F005843E7 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		9EC70CB2248A76A0005843E7 /* GitRepoAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitRepoAPI.swift; sourceTree = "<group>"; };
+		9EC70CB4248A76F2005843E7 /* GitRepoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitRepoService.swift; sourceTree = "<group>"; };
+		9EC70CB7248A770C005843E7 /* GitRepoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitRepoModel.swift; sourceTree = "<group>"; };
+		9EDEC7B8248921D000DC094B /* Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
+		9EDEC7BA248921E600DC094B /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		9EDEC7C92489425600DC094B /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
+		9EDEC7CB2489434800DC094B /* MainScreenNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenNavigation.swift; sourceTree = "<group>"; };
+		9EDEC7CD2489502E00DC094B /* GitSceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitSceneViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9EB910F12489061900629CC7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3C51E21B11AB63BAB8D4C2A /* Pods_SimpleTV.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0519A7ADC18BA765D72CB215 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2E05EFE596AAE0FD31A68BA0 /* Pods_SimpleTV.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9E9D2FBF248B99460009F61C /* SingleRepoScene */ = {
+			isa = PBXGroup;
+			children = (
+				9E9D2FC0248B99690009F61C /* SingleRepoViewController.swift */,
+				9E9D2FC2248CC61A0009F61C /* SingleRepoViewModel.swift */,
+			);
+			path = SingleRepoScene;
+			sourceTree = "<group>";
+		};
+		9EB910EB2489061900629CC7 = {
+			isa = PBXGroup;
+			children = (
+				9EB910F62489061900629CC7 /* SimpleTV */,
+				9EB910F52489061900629CC7 /* Products */,
+				A74D5812371ED120357A06FC /* Pods */,
+				0519A7ADC18BA765D72CB215 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		9EB910F52489061900629CC7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9EB910F42489061900629CC7 /* SimpleTV.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9EB910F62489061900629CC7 /* SimpleTV */ = {
+			isa = PBXGroup;
+			children = (
+				9EC70CB6248A7701005843E7 /* Model */,
+				9EDEC7BC248923D600DC094B /* Core */,
+				9EDEC7B7248921C000DC094B /* Helpers */,
+				9EB9110F2489201800629CC7 /* Scenes */,
+				9EC70CAB248A7540005843E7 /* Service */,
+				9EB910FD2489061900629CC7 /* Main.storyboard */,
+				9EB911002489061B00629CC7 /* Assets.xcassets */,
+				9EB911022489061B00629CC7 /* LaunchScreen.storyboard */,
+				9EB911052489061B00629CC7 /* Info.plist */,
+			);
+			path = SimpleTV;
+			sourceTree = "<group>";
+		};
+		9EB9110F2489201800629CC7 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				9E9D2FBF248B99460009F61C /* SingleRepoScene */,
+				9EDEC7C2248925E100DC094B /* GitScene */,
+				9EB911102489202000629CC7 /* LoginScene */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		9EB911102489202000629CC7 /* LoginScene */ = {
+			isa = PBXGroup;
+			children = (
+				9EB910FB2489061900629CC7 /* LoginSceneViewController.swift */,
+				9EB9110B2489079000629CC7 /* LoginSceneVM.swift */,
+				9E49A102248E6AE600E20EF7 /* LoginView.swift */,
+			);
+			path = LoginScene;
+			sourceTree = "<group>";
+		};
+		9EC70CAB248A7540005843E7 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				9EC70CAC248A7545005843E7 /* API */,
+				9EC70CB4248A76F2005843E7 /* GitRepoService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		9EC70CAC248A7545005843E7 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				9EC70CAD248A755F005843E7 /* APITarget.swift */,
+				9EC70CB2248A76A0005843E7 /* GitRepoAPI.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		9EC70CAF248A765C005843E7 /* APIConfiguration */ = {
+			isa = PBXGroup;
+			children = (
+				9EC70CB0248A766F005843E7 /* Configuration.swift */,
+			);
+			path = APIConfiguration;
+			sourceTree = "<group>";
+		};
+		9EC70CB6248A7701005843E7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9EC70CB7248A770C005843E7 /* GitRepoModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9EDEC7B7248921C000DC094B /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				9EB9110D248910B300629CC7 /* ViewModelProtocol.swift */,
+				9EDEC7B8248921D000DC094B /* Storyboard.swift */,
+				9EDEC7BA248921E600DC094B /* Reusable.swift */,
+				9E9D2FBD248B8DB60009F61C /* Observable+Ext.swift */,
+				9E49A100248E6AC300E20EF7 /* GenericView.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		9EDEC7BC248923D600DC094B /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				9EC70CAF248A765C005843E7 /* APIConfiguration */,
+				9EDEC7BF2489245000DC094B /* Navagation */,
+				9EB910F72489061900629CC7 /* AppDelegate.swift */,
+				9EB910F92489061900629CC7 /* SceneDelegate.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		9EDEC7BF2489245000DC094B /* Navagation */ = {
+			isa = PBXGroup;
+			children = (
+				9EDEC7C92489425600DC094B /* Storyboarded.swift */,
+				9EDEC7CB2489434800DC094B /* MainScreenNavigation.swift */,
+				9EC70CA7248A6E35005843E7 /* Application.swift */,
+			);
+			path = Navagation;
+			sourceTree = "<group>";
+		};
+		9EDEC7C2248925E100DC094B /* GitScene */ = {
+			isa = PBXGroup;
+			children = (
+				9EDEC7CF2489505800DC094B /* CustomCell */,
+				9EDEC7CD2489502E00DC094B /* GitSceneViewController.swift */,
+				9EC70CA9248A7002005843E7 /* GitSceneViewModel.swift */,
+				9EBFFC83249266AF00C3D153 /* GitSceneView.swift */,
+			);
+			path = GitScene;
+			sourceTree = "<group>";
+		};
+		9EDEC7CF2489505800DC094B /* CustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				9E8171DC248F858000264BCB /* GitSceneTableViewCell.swift */,
+			);
+			path = CustomCell;
+			sourceTree = "<group>";
+		};
+		A74D5812371ED120357A06FC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				99A226AB55D4DC9E43D9381B /* Pods-SimpleTV.debug.xcconfig */,
+				0F11C4A7C39D6C562410EE30 /* Pods-SimpleTV.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9EB910F32489061900629CC7 /* SimpleTV */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9EB911082489061B00629CC7 /* Build configuration list for PBXNativeTarget "SimpleTV" */;
+			buildPhases = (
+				D385CAE9BFF9DE33896A9EFE /* [CP] Check Pods Manifest.lock */,
+				9EB910F02489061900629CC7 /* Sources */,
+				9EB910F12489061900629CC7 /* Frameworks */,
+				9EB910F22489061900629CC7 /* Resources */,
+				795D65A2E37B9D1EC64A0498 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SimpleTV;
+			productName = SimpleTV;
+			productReference = 9EB910F42489061900629CC7 /* SimpleTV.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9EB910EC2489061900629CC7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1150;
+				LastUpgradeCheck = 1150;
+				ORGANIZATIONNAME = "Armen Nagapetyan";
+				TargetAttributes = {
+					9EB910F32489061900629CC7 = {
+						CreatedOnToolsVersion = 11.5;
+					};
+				};
+			};
+			buildConfigurationList = 9EB910EF2489061900629CC7 /* Build configuration list for PBXProject "SimpleTV" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9EB910EB2489061900629CC7;
+			productRefGroup = 9EB910F52489061900629CC7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9EB910F32489061900629CC7 /* SimpleTV */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9EB910F22489061900629CC7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9EB911042489061B00629CC7 /* LaunchScreen.storyboard in Resources */,
+				9EB911012489061B00629CC7 /* Assets.xcassets in Resources */,
+				9EB910FF2489061900629CC7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		795D65A2E37B9D1EC64A0498 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SimpleTV/Pods-SimpleTV-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SimpleTV/Pods-SimpleTV-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SimpleTV/Pods-SimpleTV-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D385CAE9BFF9DE33896A9EFE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SimpleTV-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9EB910F02489061900629CC7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9EB910FC2489061900629CC7 /* LoginSceneViewController.swift in Sources */,
+				9EB9110E248910B300629CC7 /* ViewModelProtocol.swift in Sources */,
+				9EDEC7CC2489434800DC094B /* MainScreenNavigation.swift in Sources */,
+				9EC70CAA248A7002005843E7 /* GitSceneViewModel.swift in Sources */,
+				9E49A103248E6AE600E20EF7 /* LoginView.swift in Sources */,
+				9EB910F82489061900629CC7 /* AppDelegate.swift in Sources */,
+				9EDEC7CE2489502E00DC094B /* GitSceneViewController.swift in Sources */,
+				9E49A101248E6AC300E20EF7 /* GenericView.swift in Sources */,
+				9E9D2FC3248CC61A0009F61C /* SingleRepoViewModel.swift in Sources */,
+				9EC70CB1248A766F005843E7 /* Configuration.swift in Sources */,
+				9EB910FA2489061900629CC7 /* SceneDelegate.swift in Sources */,
+				9EC70CB8248A770C005843E7 /* GitRepoModel.swift in Sources */,
+				9EDEC7CA2489425600DC094B /* Storyboarded.swift in Sources */,
+				9EDEC7B9248921D000DC094B /* Storyboard.swift in Sources */,
+				9EB9110C2489079000629CC7 /* LoginSceneVM.swift in Sources */,
+				9EC70CA8248A6E35005843E7 /* Application.swift in Sources */,
+				9EDEC7BB248921E600DC094B /* Reusable.swift in Sources */,
+				9E8171DD248F858000264BCB /* GitSceneTableViewCell.swift in Sources */,
+				9EBFFC84249266AF00C3D153 /* GitSceneView.swift in Sources */,
+				9EC70CAE248A755F005843E7 /* APITarget.swift in Sources */,
+				9E9D2FC1248B99690009F61C /* SingleRepoViewController.swift in Sources */,
+				9E9D2FBE248B8DB60009F61C /* Observable+Ext.swift in Sources */,
+				9EC70CB3248A76A0005843E7 /* GitRepoAPI.swift in Sources */,
+				9EC70CB5248A76F2005843E7 /* GitRepoService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		9EB910FD2489061900629CC7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9EB910FE2489061900629CC7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9EB911022489061B00629CC7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9EB911032489061B00629CC7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9EB911062489061B00629CC7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9EB911072489061B00629CC7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9EB911092489061B00629CC7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 99A226AB55D4DC9E43D9381B /* Pods-SimpleTV.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SimpleTV/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "-.SimpleTV";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9EB9110A2489061B00629CC7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F11C4A7C39D6C562410EE30 /* Pods-SimpleTV.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SimpleTV/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "-.SimpleTV";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9EB910EF2489061900629CC7 /* Build configuration list for PBXProject "SimpleTV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9EB911062489061B00629CC7 /* Debug */,
+				9EB911072489061B00629CC7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9EB911082489061B00629CC7 /* Build configuration list for PBXNativeTarget "SimpleTV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9EB911092489061B00629CC7 /* Debug */,
+				9EB9110A2489061B00629CC7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9EB910EC2489061900629CC7 /* Project object */;
+}
