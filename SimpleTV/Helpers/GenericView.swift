@@ -30,19 +30,9 @@ public class GenericView: UIView, GenericViewProtocol {
     func createConstraints(){}
 }
 public class GeneralTableViewCell: UITableViewCell, GenericViewProtocol{
-
-//    typealias modelType = <#type#>
-    
-    
-
-    
-    
-    
-    
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-//        bind(model: modelType.init())
         initUI()
         createConstraints()
     }
@@ -54,8 +44,5 @@ public class GeneralTableViewCell: UITableViewCell, GenericViewProtocol{
     func initUI() {}
     
     func createConstraints() {}
-    
-//    func bind(model: T) {}
-    
     
 }

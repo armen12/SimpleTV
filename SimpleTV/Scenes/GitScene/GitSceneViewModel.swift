@@ -17,7 +17,7 @@ class GitSceneViewModel: ViewModelType{
     }
     
     struct Output{
-        let gitRepos: Driver<[GitRepoModel]>
+        let gitRepos: Driver<[GitRepoItemViewModel]>
         let selectRepoIndex: Driver<(IndexPath, GitRepoModel)>
     }
     
@@ -30,15 +30,21 @@ class GitSceneViewModel: ViewModelType{
     }
     
     func transform(input: Input) -> Output {
+        let network  = self.network.getAllRepo().asDriver(onErrorJustReturn: [])
         let gitRepos = input.updateTriger.flatMapLatest{
-            return self.network.getAllRepo()
+            return network
                 .asDriver(onErrorJustReturn: [])
+                .map { $0.map { GitRepoItemViewModel(gitRepo: $0) } }
+            
         }
         let selectRepoIndex = input.selectCell.withLatestFrom(gitRepos){
             (indexPath, gitRepos) -> (IndexPath, GitRepoModel) in
-            let selectedItem = gitRepos[indexPath.row]
+//             gitRepos[indexPath.row].gitRepo
+            let selectedItem = gitRepos[indexPath.row].gitRepo
+            
             return (indexPath, selectedItem)
         }
+        
         return Output(gitRepos: gitRepos, selectRepoIndex: selectRepoIndex )
     }
 }

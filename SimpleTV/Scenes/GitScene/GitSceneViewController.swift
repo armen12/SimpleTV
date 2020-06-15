@@ -38,7 +38,8 @@ class GitSceneViewController: UIViewController {
         let output = viewModel.transform(input: input)
         output.gitRepos.drive(currentView.tableView.rx.items(cellIdentifier: GitSceneTableViewCell.reuseID, cellType: GitSceneTableViewCell.self)){tv, model, cell in
             cell.bind(model)
-        }.disposed(by: disposeBag)
+        }
+        .disposed(by: disposeBag)
         
         output.gitRepos.drive(onNext: { (some) in
             self.currentView.updateTableView()
@@ -46,9 +47,10 @@ class GitSceneViewController: UIViewController {
             .disposed(by: disposeBag)
         
         output.selectRepoIndex.drive(onNext: { (index, data) in
-            self.currentView.tableView.reloadRows(at: [index], with: .none)
-//            let cell = self.currentView.tableView.cellForRow(at: index) as! GitSceneTableViewCell
-//            cell.bind(data)
+//            self.currentView.tableView.reloadRows(at: [index], with: .none)
+            let cell = self.currentView.tableView.cellForRow(at: index) as! GitSceneTableViewCell
+            cell.updateSelected()
+
         })
             .disposed(by: disposeBag)
     }

@@ -14,7 +14,7 @@ struct GitRepoModel: Codable{
     var createAt: String?
     var updateAt: String?
     var owner: Owner
-    var isSelectedCell = false
+//    var isSelectedCell = false
     enum CodingKeys: String, CodingKey {
         case name, description, owner
         case fullName = "full_name"

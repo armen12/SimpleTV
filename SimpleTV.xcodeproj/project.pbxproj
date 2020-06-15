@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E372B4B24978A12009B0D85 /* GitRepoItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E372B4A24978A12009B0D85 /* GitRepoItemViewModel.swift */; };
 		9E49A101248E6AC300E20EF7 /* GenericView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E49A100248E6AC300E20EF7 /* GenericView.swift */; };
 		9E49A103248E6AE600E20EF7 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E49A102248E6AE600E20EF7 /* LoginView.swift */; };
 		9E8171DD248F858000264BCB /* GitSceneTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8171DC248F858000264BCB /* GitSceneTableViewCell.swift */; };
@@ -41,6 +42,7 @@
 		0F11C4A7C39D6C562410EE30 /* Pods-SimpleTV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleTV.release.xcconfig"; path = "Target Support Files/Pods-SimpleTV/Pods-SimpleTV.release.xcconfig"; sourceTree = "<group>"; };
 		2E05EFE596AAE0FD31A68BA0 /* Pods_SimpleTV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleTV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		99A226AB55D4DC9E43D9381B /* Pods-SimpleTV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleTV.debug.xcconfig"; path = "Target Support Files/Pods-SimpleTV/Pods-SimpleTV.debug.xcconfig"; sourceTree = "<group>"; };
+		9E372B4A24978A12009B0D85 /* GitRepoItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitRepoItemViewModel.swift; sourceTree = "<group>"; };
 		9E49A100248E6AC300E20EF7 /* GenericView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericView.swift; sourceTree = "<group>"; };
 		9E49A102248E6AE600E20EF7 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		9E8171DC248F858000264BCB /* GitSceneTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitSceneTableViewCell.swift; sourceTree = "<group>"; };
@@ -237,6 +239,7 @@
 			isa = PBXGroup;
 			children = (
 				9E8171DC248F858000264BCB /* GitSceneTableViewCell.swift */,
+				9E372B4A24978A12009B0D85 /* GitRepoItemViewModel.swift */,
 			);
 			path = CustomCell;
 			sourceTree = "<group>";
@@ -371,6 +374,7 @@
 				9EC70CAA248A7002005843E7 /* GitSceneViewModel.swift in Sources */,
 				9E49A103248E6AE600E20EF7 /* LoginView.swift in Sources */,
 				9EB910F82489061900629CC7 /* AppDelegate.swift in Sources */,
+				9E372B4B24978A12009B0D85 /* GitRepoItemViewModel.swift in Sources */,
 				9EDEC7CE2489502E00DC094B /* GitSceneViewController.swift in Sources */,
 				9E49A101248E6AC300E20EF7 /* GenericView.swift in Sources */,
 				9E9D2FC3248CC61A0009F61C /* SingleRepoViewModel.swift in Sources */,
