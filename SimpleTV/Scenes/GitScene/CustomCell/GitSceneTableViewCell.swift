@@ -34,13 +34,13 @@ class GitSceneTableViewCell:  GeneralTableViewCell {
         
         
     }
-//    override func prepareForReuse() {
-//        self.backgroundColor = .white
-//        self.avatarImageView.image = nil
-//        self.titleLabel.text = nil
-//        self.descriptionLabel.text = nil
-//        self.iconSelected.image = nil
-//    }
+    override func prepareForReuse() {
+        self.backgroundColor = .white
+        self.avatarImageView.image = nil
+        self.titleLabel.text = nil
+        self.descriptionLabel.text = nil
+        self.iconSelected.image = nil
+    }
     override func createConstraints() {
         iconSelected.snp.makeConstraints { make in
             make.width.equalTo(0)
@@ -84,7 +84,9 @@ class GitSceneTableViewCell:  GeneralTableViewCell {
             make.width.equalTo(105)
             make.height.equalTo(105)
         }
-        self.layoutIfNeeded()
+        UIView.animate(withDuration: 1) {
+            self.layoutIfNeeded()
+        }
     }
     
     func updateDeselectedCell(){
@@ -103,6 +105,7 @@ class GitSceneTableViewCell:  GeneralTableViewCell {
         self.titleLabel.text = viewModel.title
         self.descriptionLabel.text = viewModel.description
         avatarImageView.sd_setImage(with: URL(string: viewModel.imageUrl))
+        viewModel.gitRepo.isSelectedCell ? updateSelected() : ()
     }
 }
 
