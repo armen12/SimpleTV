@@ -10,5 +10,8 @@ target 'SimpleTV' do
 	pod 'RxDataSources'
   pod 'SDWebImage', '~> 4.0'
   pod 'SnapKit', '~> 5.0.0'
+  pod 'Hero'
+  pod 'RealmSwift', '~> 3.20.0'
+  pod 'DifferenceKit'
 
 end

@@ -7,6 +7,9 @@
 //
 
 import Foundation
+import RealmSwift
+import DifferenceKit
+
 struct GitRepoModel: Codable{
     var name: String?
     var description: String?
@@ -29,3 +32,35 @@ struct GitRepoModel: Codable{
         }
     }
 }
+
+class RealmGitRepoModel: Object, Codable{
+    @objc dynamic var name: String? = nil
+  @objc dynamic var descriptionss: String? = nil
+    @objc dynamic var fullName: String? = nil
+    @objc dynamic var createAt: String? = nil
+    @objc dynamic var updateAt: String? = nil
+    @objc dynamic var owner: RealmOwner?
+    override static func primaryKey() -> String? {
+        return "name"
+    }
+
+    enum CodingKeys: String, CodingKey {
+        case name, owner
+        case fullName = "full_name"
+        case createAt = "created_at"
+        case updateAt = "updated_at"
+        case descriptionss = "description"
+    }
+    
+}
+class RealmOwner: Object,  Codable{
+    @objc dynamic var avatarURL: String? = nil
+    enum CodingKeys: String, CodingKey {
+        case avatarURL = "avatar_url"
+    }
+}
+extension RealmGitRepoModel: Differentiable{}
+extension RealmOwner: Differentiable{}
+
+
+

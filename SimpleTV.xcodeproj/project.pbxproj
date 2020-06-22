@@ -10,10 +10,13 @@
 		9E372B4B24978A12009B0D85 /* GitRepoItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E372B4A24978A12009B0D85 /* GitRepoItemViewModel.swift */; };
 		9E49A101248E6AC300E20EF7 /* GenericView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E49A100248E6AC300E20EF7 /* GenericView.swift */; };
 		9E49A103248E6AE600E20EF7 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E49A102248E6AE600E20EF7 /* LoginView.swift */; };
+		9E54A5772498DCBE00A498DC /* ForStartap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E54A5762498DCBE00A498DC /* ForStartap.swift */; };
+		9E54A5792498F3C100A498DC /* SinglRepoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E54A5782498F3C100A498DC /* SinglRepoView.swift */; };
 		9E8171DD248F858000264BCB /* GitSceneTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8171DC248F858000264BCB /* GitSceneTableViewCell.swift */; };
 		9E9D2FBE248B8DB60009F61C /* Observable+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9D2FBD248B8DB60009F61C /* Observable+Ext.swift */; };
 		9E9D2FC1248B99690009F61C /* SingleRepoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9D2FC0248B99690009F61C /* SingleRepoViewController.swift */; };
 		9E9D2FC3248CC61A0009F61C /* SingleRepoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9D2FC2248CC61A0009F61C /* SingleRepoViewModel.swift */; };
+		9EA0A5DD249B8165002A4BCD /* CGFloat+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA0A5DC249B8165002A4BCD /* CGFloat+Color.swift */; };
 		9EB910F82489061900629CC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB910F72489061900629CC7 /* AppDelegate.swift */; };
 		9EB910FA2489061900629CC7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB910F92489061900629CC7 /* SceneDelegate.swift */; };
 		9EB910FC2489061900629CC7 /* LoginSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB910FB2489061900629CC7 /* LoginSceneViewController.swift */; };
@@ -32,7 +35,6 @@
 		9EC70CB8248A770C005843E7 /* GitRepoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC70CB7248A770C005843E7 /* GitRepoModel.swift */; };
 		9EDEC7B9248921D000DC094B /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDEC7B8248921D000DC094B /* Storyboard.swift */; };
 		9EDEC7BB248921E600DC094B /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDEC7BA248921E600DC094B /* Reusable.swift */; };
-		9EDEC7CA2489425600DC094B /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDEC7C92489425600DC094B /* Storyboarded.swift */; };
 		9EDEC7CC2489434800DC094B /* MainScreenNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDEC7CB2489434800DC094B /* MainScreenNavigation.swift */; };
 		9EDEC7CE2489502E00DC094B /* GitSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDEC7CD2489502E00DC094B /* GitSceneViewController.swift */; };
 		C3C51E21B11AB63BAB8D4C2A /* Pods_SimpleTV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E05EFE596AAE0FD31A68BA0 /* Pods_SimpleTV.framework */; };
@@ -45,10 +47,13 @@
 		9E372B4A24978A12009B0D85 /* GitRepoItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitRepoItemViewModel.swift; sourceTree = "<group>"; };
 		9E49A100248E6AC300E20EF7 /* GenericView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericView.swift; sourceTree = "<group>"; };
 		9E49A102248E6AE600E20EF7 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		9E54A5762498DCBE00A498DC /* ForStartap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForStartap.swift; sourceTree = "<group>"; };
+		9E54A5782498F3C100A498DC /* SinglRepoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinglRepoView.swift; sourceTree = "<group>"; };
 		9E8171DC248F858000264BCB /* GitSceneTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitSceneTableViewCell.swift; sourceTree = "<group>"; };
 		9E9D2FBD248B8DB60009F61C /* Observable+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+Ext.swift"; sourceTree = "<group>"; };
 		9E9D2FC0248B99690009F61C /* SingleRepoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleRepoViewController.swift; sourceTree = "<group>"; };
 		9E9D2FC2248CC61A0009F61C /* SingleRepoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleRepoViewModel.swift; sourceTree = "<group>"; };
+		9EA0A5DC249B8165002A4BCD /* CGFloat+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Color.swift"; sourceTree = "<group>"; };
 		9EB910F42489061900629CC7 /* SimpleTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EB910F72489061900629CC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9EB910F92489061900629CC7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,7 +74,6 @@
 		9EC70CB7248A770C005843E7 /* GitRepoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitRepoModel.swift; sourceTree = "<group>"; };
 		9EDEC7B8248921D000DC094B /* Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
 		9EDEC7BA248921E600DC094B /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
-		9EDEC7C92489425600DC094B /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 		9EDEC7CB2489434800DC094B /* MainScreenNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenNavigation.swift; sourceTree = "<group>"; };
 		9EDEC7CD2489502E00DC094B /* GitSceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitSceneViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -99,6 +103,7 @@
 			children = (
 				9E9D2FC0248B99690009F61C /* SingleRepoViewController.swift */,
 				9E9D2FC2248CC61A0009F61C /* SingleRepoViewModel.swift */,
+				9E54A5782498F3C100A498DC /* SinglRepoView.swift */,
 			);
 			path = SingleRepoScene;
 			sourceTree = "<group>";
@@ -199,6 +204,7 @@
 				9EDEC7BA248921E600DC094B /* Reusable.swift */,
 				9E9D2FBD248B8DB60009F61C /* Observable+Ext.swift */,
 				9E49A100248E6AC300E20EF7 /* GenericView.swift */,
+				9EA0A5DC249B8165002A4BCD /* CGFloat+Color.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -210,6 +216,7 @@
 				9EDEC7BF2489245000DC094B /* Navagation */,
 				9EB910F72489061900629CC7 /* AppDelegate.swift */,
 				9EB910F92489061900629CC7 /* SceneDelegate.swift */,
+				9E54A5762498DCBE00A498DC /* ForStartap.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -217,7 +224,6 @@
 		9EDEC7BF2489245000DC094B /* Navagation */ = {
 			isa = PBXGroup;
 			children = (
-				9EDEC7C92489425600DC094B /* Storyboarded.swift */,
 				9EDEC7CB2489434800DC094B /* MainScreenNavigation.swift */,
 				9EC70CA7248A6E35005843E7 /* Application.swift */,
 			);
@@ -377,11 +383,11 @@
 				9E372B4B24978A12009B0D85 /* GitRepoItemViewModel.swift in Sources */,
 				9EDEC7CE2489502E00DC094B /* GitSceneViewController.swift in Sources */,
 				9E49A101248E6AC300E20EF7 /* GenericView.swift in Sources */,
+				9EA0A5DD249B8165002A4BCD /* CGFloat+Color.swift in Sources */,
 				9E9D2FC3248CC61A0009F61C /* SingleRepoViewModel.swift in Sources */,
 				9EC70CB1248A766F005843E7 /* Configuration.swift in Sources */,
 				9EB910FA2489061900629CC7 /* SceneDelegate.swift in Sources */,
 				9EC70CB8248A770C005843E7 /* GitRepoModel.swift in Sources */,
-				9EDEC7CA2489425600DC094B /* Storyboarded.swift in Sources */,
 				9EDEC7B9248921D000DC094B /* Storyboard.swift in Sources */,
 				9EB9110C2489079000629CC7 /* LoginSceneVM.swift in Sources */,
 				9EC70CA8248A6E35005843E7 /* Application.swift in Sources */,
@@ -393,6 +399,8 @@
 				9E9D2FBE248B8DB60009F61C /* Observable+Ext.swift in Sources */,
 				9EC70CB3248A76A0005843E7 /* GitRepoAPI.swift in Sources */,
 				9EC70CB5248A76F2005843E7 /* GitRepoService.swift in Sources */,
+				9E54A5792498F3C100A498DC /* SinglRepoView.swift in Sources */,
+				9E54A5772498DCBE00A498DC /* ForStartap.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

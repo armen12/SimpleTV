@@ -9,6 +9,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import DifferenceKit
 
 class GitSceneViewController: UIViewController {
     var currentView: GitSceneView{
@@ -25,6 +26,7 @@ class GitSceneViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = .red
         self.bindViewModel()
     }
     
@@ -33,7 +35,7 @@ class GitSceneViewController: UIViewController {
             .mapToVoid()
             .asDriverOnErrorJustComplete()
         
-        let input = GitSceneViewModel.Input(updateTriger: viewWillAppear, selectCell: currentView.tableView.rx.itemSelected.asDriver())
+        let input = GitSceneViewModel.Input(updateTriger: viewWillAppear, selectCell: currentView.tableView.rx.itemSelected.asDriver(), noFilterButtonTap: self.currentView.withoutFilterButton.rx.tap.asDriver(), filterButtonTap: self.currentView.withFilterButton.rx.tap.asDriver() )
         
         let output = viewModel.transform(input: input)
         output.gitRepos.drive(currentView.tableView.rx.items(cellIdentifier: GitSceneTableViewCell.reuseID, cellType: GitSceneTableViewCell.self)){tv, viewModel, cell in
@@ -41,14 +43,22 @@ class GitSceneViewController: UIViewController {
         }
         .disposed(by: disposeBag)
         
-        output.gitRepos.drive(onNext: { (some) in
-            self.currentView.updateTableView()
-        })
+        //        output.gitRepos.drive(onNext: { (some) in
+        //            self.currentView.updateTableView()
+        //        })
+        //            .disposed(by: disposeBag)
+        //        output.selectRepoIndex
+        //            .drive()
+        //            .disposed(by: disposeBag)
+         output.selectRepoIndex.drive(onNext: { (index) in
+            self.currentView.tableView.reloadRows(at: [index], with: .none)
+            })
             .disposed(by: disposeBag)
         
-        output.selectRepoIndex.drive(onNext: { (index) in
-            self.currentView.tableView.reloadRows(at: [index], with: .none)
-        })
-            .disposed(by: disposeBag)
+//        output.filterButtonTap.drive(onNext:{ repos in
+//            self.currentView.tableView.reloadData()
+//        })
+//            .disposed(by: disposeBag)
+        
     }
 }

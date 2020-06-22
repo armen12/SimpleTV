@@ -30,9 +30,7 @@ class LoginSceneViewController: UIViewController {
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        //        self.currentView.updateTextFields()
     }
-    //    setNeeds
     private func bindViewModel(){
         let input = LoginSceneVM.Input(name: currentView.nameTextField.rx.text.orEmpty.asObservable(), password: currentView.passwordTextView.rx.text.orEmpty.asObservable(), buttonTap: currentView.showInfo.rx.tap.asObservable(), nextScreenTrigger: currentView.nextScreenButton.rx.tap.asDriver())
         

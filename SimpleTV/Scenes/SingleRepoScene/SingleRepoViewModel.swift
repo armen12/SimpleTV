@@ -9,28 +9,28 @@
 import Foundation
 import RxSwift
 import RxCocoa
+import SDWebImage
 //class SingleRepoViewModel: ViewModelType{
+//    struct Input{
+//        let title: String
+//        let description: String
+//        let img: URL
+//
+//    }
+//    struct Output {
+//        let model: Driver<GitRepoModel>
+//    }
+//     private let navigator: MainScreenNavigation
+//       private let model: GitRepoModel
+//
+//       init(navigator: MainScreenNavigation, model: GitRepoModel) {
+//           self.navigator = navigator
+//           self.model = model
+//    }
+//
+//   func transform(input: Input) -> Output {
 //    
-////    struct Input{
-////        let title: Driver<String>
-////        let description: Driver<String>
-////        let img: Driver<URL>
-////        
-////    }
-////    struct Output {
-////        let model: Driver<GitRepoModel>
-////    }
-////     private let navigator: MainScreenNavigation
-////       private let model: GitRepoModel
-////       
-////       init(navigator: MainScreenNavigation, model: GitRepoModel) {
-////           self.navigator = navigator
-////           self.model = model
-////       }
-////    
-////    func transform(input: Input) -> Output {
-//////        let output = self.model.as
-////        return Output(model: <#T##Driver<GitRepoModel>#>)
-////    }
-//    
+// return Output(model: output)
+//}
+//
 //}

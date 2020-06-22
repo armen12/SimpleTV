@@ -1,12 +1,24 @@
 PODS:
   - Alamofire (4.9.1)
+  - DifferenceKit (1.1.5):
+    - DifferenceKit/Core (= 1.1.5)
+    - DifferenceKit/UIKitExtension (= 1.1.5)
+  - DifferenceKit/Core (1.1.5)
+  - DifferenceKit/UIKitExtension (1.1.5):
+    - DifferenceKit/Core
   - Differentiator (3.1.0)
+  - Hero (1.5.0)
   - Moya/Core (13.0.1):
     - Alamofire (~> 4.1)
     - Result (~> 4.1)
   - Moya/RxSwift (13.0.1):
     - Moya/Core
     - RxSwift (~> 4.0)
+  - Realm (3.20.0):
+    - Realm/Headers (= 3.20.0)
+  - Realm/Headers (3.20.0)
+  - RealmSwift (3.20.0):
+    - Realm (= 3.20.0)
   - Result (4.1.0)
   - RxCocoa (4.5.0):
     - RxSwift (>= 4.4.2, ~> 4.4)
@@ -21,7 +33,10 @@ PODS:
   - SnapKit (5.0.1)
 
 DEPENDENCIES:
+  - DifferenceKit
+  - Hero
   - Moya/RxSwift (~> 13.0)
+  - RealmSwift (~> 3.20.0)
   - RxCocoa
   - RxDataSources
   - SDWebImage (~> 4.0)
@@ -30,8 +45,12 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - DifferenceKit
     - Differentiator
+    - Hero
     - Moya
+    - Realm
+    - RealmSwift
     - Result
     - RxCocoa
     - RxDataSources
@@ -41,8 +60,12 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  DifferenceKit: 516f12e336ed65a3a0665847b5c3cb5cad4bd4ea
   Differentiator: be49ca3408f0ecfc761e4c7763d20c62be01b9ad
+  Hero: b7385b75e7259da62f4f85462f59a5082d66b058
   Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
+  Realm: 8b2ca5bc6479a91f379b6b42b5922e396cd5ba5a
+  RealmSwift: 1949ef26a279e1845bd51d591b9103adfcd121df
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
   RxCocoa: cbf70265dc65a981d4ac982e513c10cf23df24a0
   RxDataSources: a843bad90c29817f5923ec8163f4af2de084ceb3
@@ -50,6 +73,6 @@ SPEC CHECKSUMS:
   SDWebImage: 783af2c3fa36291a250030c4752ee370a9a51d13
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
 
-PODFILE CHECKSUM: c3b4519ade9a93a935944db49f17e9f49386d66b
+PODFILE CHECKSUM: 34785b2e75c69dbb2ceeb4ddf171a4c37d9717b6
 
 COCOAPODS: 1.9.1

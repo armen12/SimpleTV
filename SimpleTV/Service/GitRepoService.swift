@@ -11,17 +11,17 @@ import RxSwift
 import Moya
 
 protocol GitRepoServicesProtocol {
-    func getAllRepo() -> Single<[GitRepoModel]>
+    func getAllRepo() -> Single<[RealmGitRepoModel]>
 }
 class GitRepoServices: GitRepoServicesProtocol{
     let disposeBag = DisposeBag()
     let gitRepoProvider = MoyaProvider<GitRepoAPI>(plugins: [NetworkLoggerPlugin(verbose: true)])
     
-    func getAllRepo() -> Single<[GitRepoModel]> {
+    func getAllRepo() -> Single<[RealmGitRepoModel]> {
         return  gitRepoProvider.rx
             .request(.getAllRepo)
             .filterSuccessfulStatusCodes()
-            .map([GitRepoModel].self)
+            .map([RealmGitRepoModel].self)
         
     }
 }

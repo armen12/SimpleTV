@@ -7,24 +7,31 @@
 //
 
 import UIKit
+import SDWebImage
+import Hero
+
 
 class SingleRepoViewController: UIViewController {
+    var model: GitRepoModel?
+    
+    
+    var currentView: SinglRepoView{
+          return self.view as! SinglRepoView
+      }
+      
 
+      
+      override func loadView() {
+          super.loadView()
+          
+        self.view = SinglRepoView()
+      }
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.currentView.descriptionLabel.text = model?.description
+        self.currentView.titleLabel.text = model?.name
+        self.currentView.image.sd_setImage(with: URL(string: (model?.owner.avatarURL)!))
+        
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

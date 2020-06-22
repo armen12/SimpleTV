@@ -11,26 +11,33 @@ import RxSwift
 protocol MainScreenNavigation {
     func start()
     func toGitScene()
+    func toSingleRepo(model: GitRepoModel)
 }
 class ScreenNavigation: MainScreenNavigation {
     var navigationController: UINavigationController
     
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
+//        self.navigationController.isHeroEnabled = true
     }
     func start() {
         let vc = LoginSceneViewController()
         vc.viewModel = LoginSceneVM(navigator: self)
-        navigationController.pushViewController(vc, animated: false)
+        navigationController.pushViewController(vc, animated: true)
     }
     func toGitScene(){
         let vc = GitSceneViewController()
         let network = GitRepoServices()
         vc.viewModel = GitSceneViewModel(navigator: self, network: network)
-        navigationController.pushViewController(vc, animated: false)
+//        navigationController.heroNavigationAnimationType = .zoom
+
+        navigationController.pushViewController(vc, animated: true)
     }
-    func toSingleRepo(){
-        
+    func toSingleRepo(model: GitRepoModel){
+        let vc = SingleRepoViewController()
+        vc.model = model
+//        vc.viewModel = SingleRepoViewModel(navigator: self, model: model)
+        navigationController.pushViewController(vc, animated: true)
     }
     
     

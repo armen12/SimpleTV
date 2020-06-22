@@ -9,6 +9,7 @@
 import UIKit
 import SnapKit
 import SDWebImage
+import Hero
 
 class GitSceneTableViewCell:  GeneralTableViewCell {
     let avatarImageView = UIImageView()
@@ -18,7 +19,7 @@ class GitSceneTableViewCell:  GeneralTableViewCell {
     
     override func initUI() {
         self.selectionStyle = .none
-        self.backgroundColor = .white
+        self.backgroundColor = .random()
         self.addSubview(avatarImageView)
         self.addSubview(titleLabel)
         self.addSubview(descriptionLabel)
@@ -27,7 +28,7 @@ class GitSceneTableViewCell:  GeneralTableViewCell {
         titleLabel.text = "username"
         titleLabel.textColor = .black
         
-        
+        avatarImageView.heroID = "GitSceneTableViewCell"
         descriptionLabel.text = "description"
         descriptionLabel.textColor = .black
         descriptionLabel.numberOfLines = 0
@@ -35,7 +36,6 @@ class GitSceneTableViewCell:  GeneralTableViewCell {
         
     }
     override func prepareForReuse() {
-        self.backgroundColor = .white
         self.avatarImageView.image = nil
         self.titleLabel.text = nil
         self.descriptionLabel.text = nil
@@ -44,7 +44,7 @@ class GitSceneTableViewCell:  GeneralTableViewCell {
     override func createConstraints() {
         iconSelected.snp.makeConstraints { make in
             make.width.equalTo(0)
-            make.height.equalTo(0)
+            make.height.equalTo(22)
             make.centerY.equalTo(avatarImageView.snp.centerY)
             make.left.equalToSuperview().inset(5)
         }
@@ -67,29 +67,31 @@ class GitSceneTableViewCell:  GeneralTableViewCell {
             make.left.equalTo(avatarImageView.snp.right).offset(5)
             make.bottomMargin.equalToSuperview().inset(11)
         }
-        UIView.animate(withDuration: 1, delay: 1, animations: {
+        UIView.animate(withDuration: 1, delay: 0, animations: {
             self.layoutIfNeeded()
         })
     }
     
     func updateSelected(){
-        self.backgroundColor = .yellow
-        iconSelected.image = UIImage(named: "Icon")
-        self.iconSelected.snp.updateConstraints { make in
-            make.width.equalTo(22)
-            make.height.equalTo(22)
-        }
-        self.avatarImageView.snp.updateConstraints { make in
-            make.left.equalToSuperview().inset(21)
-            make.width.equalTo(105)
-            make.height.equalTo(105)
-        }
+        
         UIView.animate(withDuration: 1) {
+            self.backgroundColor = .yellow
+            self.iconSelected.image = UIImage(named: "Icon")
+            self.iconSelected.snp.updateConstraints { make in
+                make.width.equalTo(22)
+            }
+            self.avatarImageView.snp.updateConstraints { make in
+                make.left.equalToSuperview().inset(21)
+                make.width.equalTo(105)
+                make.height.equalTo(105)
+            }
             self.layoutIfNeeded()
         }
     }
     
     func updateDeselectedCell(){
+        self.backgroundColor = .random()
+
         iconSelected.snp.updateConstraints { make in
             make.width.equalTo(0)
             make.height.equalTo(0)
@@ -101,11 +103,13 @@ class GitSceneTableViewCell:  GeneralTableViewCell {
         self.layoutIfNeeded()
     }
     
-    func bind(_ viewModel:GitRepoItemViewModel) {
+    func bind(_ viewModel:RealmGitRepoItemViewModel) {
         self.titleLabel.text = viewModel.title
-        self.descriptionLabel.text = viewModel.description
-        avatarImageView.sd_setImage(with: URL(string: viewModel.imageUrl))
-        viewModel.gitRepo.isSelectedCell ? updateSelected() : ()
+        self.descriptionLabel.text = viewModel.descriptionss
+        if let url =  viewModel.imageUrl{
+            avatarImageView.sd_setImage(with: URL(string: url))
+        }
+        viewModel.isSelected ? updateSelected() : ()
     }
 }
 
